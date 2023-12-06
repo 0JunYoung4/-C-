@@ -33,7 +33,7 @@ int main()
 
 	// [문제] s를 길이 오름차순으로 정렬한 후 출력하라.
 	qsort(s, sizeof(s) / sizeof(STRING), sizeof(STRING), [](const void* a, const void* b) {
-		return ((STRING*)a)->size() - ((STRING*)b)->size();
+		return (int)((STRING*)a)->size() - (int)((STRING*)b)->size();		// unsigned long long 타입이여서 음수가 안된다.
 		});
 
 	//결과 출력
